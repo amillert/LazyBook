@@ -1,4 +1,5 @@
 ﻿using System;
+using LazyBook.Views;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,10 +13,7 @@ namespace LazyBook
         {
             InitializeComponent();
 
-            if (Device.RuntimePlatform == Device.iOS)
-                MainPage = new MainPage();
-            else
-                MainPage = new NavigationPage(new MainPage());
+            Current.MainPage = new NavigationPage(new LoggingView());
         }
     }
 }
