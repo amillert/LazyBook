@@ -17,10 +17,10 @@ namespace LazyBook.ViewModels
 {
     class BooksViewModel : INotifyPropertyChanged
     {
-        public ObservableCollection<Book> Books { get; set; }
+        public ObservableCollection<Item> Books { get; set; }
         public BooksViewModel()
         {
-            Books = new ObservableCollection<Book>();
+            Books = new ObservableCollection<Item>();
             GetBooksCommand = new Command(
                async () => await GetBooks(),
                () => !IsBusy);
@@ -56,7 +56,7 @@ namespace LazyBook.ViewModels
 
                 IsBusy = true;
 
-                var service = DependencyService.Get<AzureSevices>();
+                var service = DependencyService.Get<MockDataStore>();
                 var items = await service.GetBooks();
 
                 Books.Clear();

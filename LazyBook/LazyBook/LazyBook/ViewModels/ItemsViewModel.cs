@@ -2,19 +2,31 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
+using System.Linq;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Text;
+using System.Net.Http;
+using Newtonsoft.Json;
+using System.Runtime.CompilerServices;
+using LazyBook.Models;
+using LazyBook.Services;
 
 namespace LazyBook
 {
     public class ItemsViewModel : BaseViewModel
     {
+        MockDataStore azureServices;
         public ObservableCollection<Item> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
+
+        Item Item { get; set; }
 
         public ItemsViewModel()
         {
             Title = "Browse";
+            azureServices = DependencyService.Get<MockDataStore>();
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
@@ -36,13 +48,33 @@ namespace LazyBook
             try
             {
                 Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
+                var items = await azureServices.GetBooks();
                 foreach (var item in items)
                 {
                     Items.Add(item);
                 }
             }
             catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+        async Task ExecuteAddItemCommandAsync()
+        {
+            if (IsBusy)
+                return;
+            try
+            {
+                var item = await azureServices.AddBook(Item);
+                Items.Add(item);
+
+                
+            }catch(Exception ex)
             {
                 Debug.WriteLine(ex);
             }
