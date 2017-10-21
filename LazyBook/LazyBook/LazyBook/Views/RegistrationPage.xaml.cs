@@ -37,14 +37,14 @@ namespace LazyBook.Views
             //    }
             //}
 
-            if (passwordEntry != password2Entry)
-            {
-                DisplayAlert("Registration", "Your passwords don't match!", "OK");
-                Success = false;
-                user.password == passwordEntry.Text;
-            }
+            //if (passwordEntry != password2Entry)
+            //{
+            //    DisplayAlert("Registration", "Your passwords don't match!", "OK");
+            //    Success = false;
+            //    user.password == passwordEntry.Text;
+            //}
 
-            DisplayAlert("Registeration", "Registration completed successfully!", "OK");
+            //DisplayAlert("Registeration", "Registration completed successfully!", "OK");
         }
     }
 }

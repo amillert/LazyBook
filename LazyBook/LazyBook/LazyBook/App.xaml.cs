@@ -9,17 +9,29 @@ namespace LazyBook
 {
     public partial class App : Application
     {
-            LoggingView loggingView;
+        bool logged = false;
+        LoggingView loggingView;
+        MainMasterDetailPage masterDetail;
+
         public App()
         {
             InitializeComponent();
             loggingView = new LoggingView();
-            Current.MainPage = loggingView;
+            masterDetail = new MainMasterDetailPage();
+            if (logged)
+            {
+                Current.MainPage = masterDetail;
+            }
+            else
+            {
+                Current.MainPage = loggingView;
+            }
         }
 
-        static private void LoggedHandler(object sender, EventArgs e)
+        private void LoggedHandler(object sender, EventArgs e)
         {
-            Current.MainPage = new MainMasterDetailPage();
+            logged = true;
+            Current.MainPage = masterDetail;
         }
 
         protected override void OnStart()
