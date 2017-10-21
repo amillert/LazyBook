@@ -15,8 +15,8 @@ namespace LazyBook
 
             var item = new Item
             {
-                Text = "Item 1",
-                Description = "This is an item description."
+                Summary = "Item 1",
+                Year = "This is an item description."
             };
 
             viewModel = new ItemDetailViewModel(item);

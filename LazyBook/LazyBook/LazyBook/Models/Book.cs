@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-enum Category { Business, Cooking, History, Computers, Detective, Thriller, Kids, Politics, Law, Religion, Romance, Science_Fiction, Health} 
 
 namespace LazyBook.Models
 {
+    enum Cat { Business, Cooking, History, Computers, Detective, Thriller, Kids, Politics, Law, Religion, Romance, Science_Fiction, Health} 
     class Book
     {
         [Newtonsoft.Json.JsonProperty("Id")]
@@ -26,7 +26,7 @@ namespace LazyBook.Models
         public int Year { get; set; }
 
         [Newtonsoft.Json.JsonProperty("Category")]
-        public Category Category { get; set; }
+        public Cat Category { get; set; }
 
         [Newtonsoft.Json.JsonProperty("Summary")]
         public string Summary { get; set; }
@@ -34,7 +34,7 @@ namespace LazyBook.Models
         [Microsoft.WindowsAzure.MobileServices.Version]
         public string AzureVersion { get; set; }
 
-        public Book(string name, string author, string publisher, int year, Category category, string summary)
+        public Book(string name, string author, string publisher, int year, Cat category, string summary)
         {
             this.Name = name;
             this.Author = author;
