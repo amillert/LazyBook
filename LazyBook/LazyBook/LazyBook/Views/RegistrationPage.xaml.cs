@@ -21,7 +21,7 @@ namespace LazyBook.Views
         {
             bool Success = true;
             
-            for(var user in Users)
+            foreach(var user in Users)
             {
                 if (user.username == usernameEntry.Text)
                 {

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-enum Category { Business, Cooking, History, Computers, Detective, Thriller, Kids, Politics, Law, Religion, Romance, Science_Fiction, Health} 
 
 namespace LazyBook.Models
 {
+    public enum Category { Business, Cooking, History, Computers, Detective, Thriller, Kids, Politics, Law, Religion, Romance, Science_Fiction, Health}
+
     class Book
     {
         [Newtonsoft.Json.JsonProperty("Id")]
