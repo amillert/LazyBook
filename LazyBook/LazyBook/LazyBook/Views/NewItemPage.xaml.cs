@@ -15,8 +15,8 @@ namespace LazyBook
 
             Item = new Item
             {
-                Text = "Item name",
-                Description = "This is an item description."
+                Summary = "Item 1",
+                Year = "This is an item description."
             };
 
             BindingContext = this;
