@@ -6,11 +6,11 @@
         <StackLayout Margin="20, 0, 20, 0">
             <Entry x:Name="emailEntry"
                 Placeholder="E-mail"/>
-            
+
             <Entry x:Name="passwordEntry"
                 Placeholder="Password" 
                    IsPassword="True"/>
-            
+
             <Button Text="Log In"
                 Clicked="LogIn_Clicked"/>
             

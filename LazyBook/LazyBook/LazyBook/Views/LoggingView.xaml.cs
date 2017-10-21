@@ -31,12 +31,26 @@ namespace LazyBook.Views
 
         private void SignUp_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new RegistrationPage());
         }
 
         private void LogIn_Clicked(object sender, EventArgs e)
         {
-            OnThresholdReached(EventArgs.Empty);
+            bool Success = true;
+
+            foreach(var user in Users)
+            {
+                if (user.email == emailEntry.Text && user.password == passwordEntry.Text)
+                {
+                    DisplayAlert("Registration", "Successfully logged in!", "OK");
+                    Success = true;
+                    OnThresholdReached(EventArgs.Empty);
+                }
+            }
+            emailEntry.Text = String.Empty;
+            passwordEntry.Text = String.Empty;
+            Success = false;
+            DisplayAlert("Registration", "Logging in unsuccessfull!", "OK");
         }
     }
 }
