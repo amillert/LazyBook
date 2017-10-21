@@ -38,30 +38,25 @@ namespace LazyBook.Views
 
         private void LogIn_Clicked(object sender, EventArgs e)
         {
-        //    bool Success = true;
+            bool Success = true;
             
-        //    for(var user in Users)
-        //    {
-        //        if (user.username == usernameEntry.Text)
-        //        {
-        //            DisplayAlert("Registration", "Username is already in use!", "OK");
-        //            Success = false;
-        //            break;
-        //        }
-        //        if (user.email == emailEntry.Text)
-        //        {
-        //            DisplayAlert("Registratiion", "E-mail is already in use!", "OK");
-        //            Success = false;
-        //            break;
-        //        }
-        //    }
+            for(var user in Users)
+            {
+                if (user.email == emailEntry.Text && user.password == passwordEntry.Text)
+                {
+                    DisplayAlert("Registratiion", "Successfully logged in!", "OK");
+                    Success = true;
+                    break;
+                }
 
-        //    if (passwordEntry != password)
-        //    {
-        //        DisplayAlert("Registration", "Your password doesn't match confirmation!", "OK");
-        //        Success = false;
-        //        user.password == passwordEntry.Text
-        //    }
-        //}
+                if (user.email == emailEntry.Text && user.password != passwordEntry.Text)
+                {
+                    DisplayAlert("Registratiion", "Incorrect password!", "OK");
+                    Success = false;
+                    passwordEntry.Text = String.Empty;
+                    break;
+                }
+            }
+        }
     }
 }

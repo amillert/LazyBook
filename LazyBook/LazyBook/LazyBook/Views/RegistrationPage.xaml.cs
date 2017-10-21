@@ -19,32 +19,36 @@ namespace LazyBook.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            //bool Success = true;
+            bool Success = true;
             
-            //for(var user in Users)
-            //{
-            //    if (user.username == usernameEntry.Text)
-            //    {
-            //        DisplayAlert("Registration", "Username is already in use!", "OK");
-            //        Success = false;
-            //        break;
-            //    }
-            //    if (user.email == emailEntry.Text)
-            //    {
-            //        DisplayAlert("Registratiion", "E-mail is already in use!", "OK");
-            //        Success = false;
-            //        break;
-            //    }
-            //}
+            for(var user in Users)
+            {
+                if (user.username == usernameEntry.Text)
+                {
+                    DisplayAlert("Registration", "Username is already in use!", "OK");
+                    Success = false;
+                    break;
+                }
+                if (user.email == emailEntry.Text)
+                {
+                    DisplayAlert("Registratiion", "E-mail is already in use!", "OK");
+                    Success = false;
+                    break;
+                }
+            }
 
             if (passwordEntry != password2Entry)
             {
                 DisplayAlert("Registration", "Your passwords don't match!", "OK");
                 Success = false;
-                user.password == passwordEntry.Text;
+                passwordEntry.Text = String.Empty;
+                password2Entry.Text = String.Empty;
             }
-
-            DisplayAlert("Registeration", "Registration completed successfully!", "OK");
+            if (Success == true)
+            {
+                //Add to database
+                DisplayAlert("Registeration", "Registration completed successfully!", "OK");
+            }
         }
     }
 }
