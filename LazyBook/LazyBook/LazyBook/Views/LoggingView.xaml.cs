@@ -12,9 +12,32 @@ namespace LazyBook.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoggingView : ContentPage
     {
+        public delegate void PageBreakNext(string IRPOlink);
+        public event PageBreakNext PageBreak;
+
+        protected virtual void OnThresholdReached(EventArgs e)
+        {
+            EventHandler handler = ThresholdReached;
+            if (handler != null)
+            {
+                handler(this, e);
+            }
+        }
+
+        public event EventHandler ThresholdReached;
+
         public LoggingView()
         {
             InitializeComponent();
+        }
+
+        private void SignUp_Clicked(object sender, EventArgs e)
+        {
+            OnThresholdReached(EventArgs.Empty);
+        }
+
+        private void LogIn_Clicked(object sender, EventArgs e)
+        {
 
         }
     }

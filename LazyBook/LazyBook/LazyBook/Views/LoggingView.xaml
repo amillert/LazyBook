@@ -5,15 +5,17 @@
     <ContentPage.Content>
         <StackLayout Margin="20, 0, 20, 0">
             <Entry Placeholder="E-mail"/>
-            <Entry Placeholder="Password" IsPassword="True"/>
+            
+            <Entry Placeholder="Password" 
+                   IsPassword="True"/>
+            
             <Button Text="Log In"
-                />
+                Clicked="LogIn_Clicked"/>
             <Label Text="or" HorizontalOptions="CenterAndExpand"/>
+            
             <Button Text="Sign Up"
-                />
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                Clicked="SignUp_Clicked"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
