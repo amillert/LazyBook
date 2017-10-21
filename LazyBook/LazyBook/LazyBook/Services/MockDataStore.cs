@@ -19,6 +19,9 @@ namespace LazyBook
                 new Item { Id = Guid.NewGuid().ToString() ,Name = "Ksiazka", Author = "Marcin", Publisher = "Bartek", Year = "2017", Category = Cat.Business, Summary = "Zajebista ksiazka!!!111one" }, 
                 new Item { Id = Guid.NewGuid().ToString() ,Name = "Ksiazka", Author = "Marcin", Publisher = "Bartek", Year = "2017", Category = Cat.Business, Summary = "Zajebista ksiazka!!!111one" }, 
                 new Item { Id = Guid.NewGuid().ToString() ,Name = "Ksiazka", Author = "Marcin", Publisher = "Bartek", Year = "2017", Category = Cat.Business, Summary = "Zajebista ksiazka!!!111one" }, 
+                new Item { Id = Guid.NewGuid().ToString() ,Name = "Ksiazka", Author = "Marcin", Publisher = "Bartek", Year = "2017", Category = Cat.Business, Summary = "Zajebista ksiazka!!!111one" },
+                new Item { Id = Guid.NewGuid().ToString() ,Name = "Ksiazka", Author = "Marcin", Publisher = "Bartek", Year = "2017", Category = Cat.Business, Summary = "Zajebista ksiazka!!!111one" },
+                new Item { Id = Guid.NewGuid().ToString() ,Name = "Ksiazka", Author = "Marcin", Publisher = "Bartek", Year = "2017", Category = Cat.Business, Summary = "Zajebista ksiazka!!!111one" },
                 new Item { Id = Guid.NewGuid().ToString() ,Name = "Ksiazka", Author = "Marcin", Publisher = "Bartek", Year = "2017", Category = Cat.Business, Summary = "Zajebista ksiazka!!!111one" }
             };
 
