@@ -12,8 +12,6 @@ namespace LazyBook.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoggingView : ContentPage
     {
-        public delegate void PageBreakNext(string IRPOlink);
-        public event PageBreakNext PageBreak;
 
         protected virtual void OnThresholdReached(EventArgs e)
         {
@@ -33,30 +31,35 @@ namespace LazyBook.Views
 
         private void SignUp_Clicked(object sender, EventArgs e)
         {
-            OnThresholdReached(EventArgs.Empty);
+
         }
 
         private void LogIn_Clicked(object sender, EventArgs e)
         {
-            bool Success = true;
+        //    bool Success = true;
             
-            for(var user in Users)
-            {
-                if (user.email == emailEntry.Text && user.password == passwordEntry.Text)
-                {
-                    DisplayAlert("Registratiion", "Successfully logged in!", "OK");
-                    Success = true;
-                    break;
-                }
+        //    for(var user in Users)
+        //    {
+        //        if (user.username == usernameEntry.Text)
+        //        {
+        //            DisplayAlert("Registration", "Username is already in use!", "OK");
+        //            Success = false;
+        //            break;
+        //        }
+        //        if (user.email == emailEntry.Text)
+        //        {
+        //            DisplayAlert("Registratiion", "E-mail is already in use!", "OK");
+        //            Success = false;
+        //            break;
+        //        }
+        //    }
 
-                if (user.email == emailEntry.Text && user.password != passwordEntry.Text)
-                {
-                    DisplayAlert("Registratiion", "Incorrect password!", "OK");
-                    Success = false;
-                    passwordEntry.Text = String.Empty;
-                    break;
-                }
-            }
-        }
+        //    if (passwordEntry != password)
+        //    {
+        //        DisplayAlert("Registration", "Your password doesn't match confirmation!", "OK");
+        //        Success = false;
+        //        user.password == passwordEntry.Text
+        //    }
+        //}
     }
 }
