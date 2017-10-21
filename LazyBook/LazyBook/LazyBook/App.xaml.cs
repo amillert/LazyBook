@@ -9,15 +9,22 @@ namespace LazyBook
 {
     public partial class App : Application
     {
+            LoggingView loggingView;
         public App()
         {
             InitializeComponent();
+            loggingView = new LoggingView();
+            Current.MainPage = loggingView;
+        }
 
-            Current.MainPage = new NavigationPage(new LoggingView());
+        static private void LoggedHandler(object sender, EventArgs e)
+        {
+            Current.MainPage = new MainMasterDetailPage();
         }
 
         protected override void OnStart()
         {
+            loggingView.ThresholdReached += LoggedHandler;
 
             // Handle when your app starts
         }

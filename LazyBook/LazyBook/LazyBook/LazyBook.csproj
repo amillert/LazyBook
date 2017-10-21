@@ -51,6 +51,16 @@
     <Compile Include="Views\LoggingView.xaml.cs">
       <DependentUpon>LoggingView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MainMasterDetailPage.xaml.cs">
+      <DependentUpon>MainMasterDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainMasterDetailPageDetail.xaml.cs">
+      <DependentUpon>MainMasterDetailPageDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainMasterDetailPageMaster.xaml.cs">
+      <DependentUpon>MainMasterDetailPageMaster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainMasterDetailPageMenuItem.cs" />
     <Compile Include="Views\MainPage.cs" />
     <Compile Include="Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
@@ -121,6 +131,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\LoggingView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\MainMasterDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\MainMasterDetailPageMaster.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\MainMasterDetailPageDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
