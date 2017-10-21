@@ -2,12 +2,82 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text;
+using System.IO;
+using Xamarin.Forms;
+using Microsoft.WindowsAzure.MobileServices;
+using Microsoft.WindowsAzure.MobileServices.Sync;
+using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
+using System.Diagnostics;
+using LazyBook.Models;
 
 [assembly: Xamarin.Forms.Dependency(typeof(LazyBook.MockDataStore))]
 namespace LazyBook
 {
     public class MockDataStore : IDataStore<Item>
     {
+        public MobileServiceClient Client { get; set; } = null;
+        IMobileServiceSyncTable<Item> table;
+
+        public async Task Initialize()
+        {
+            if (Client?.SyncContext?.IsInitialized ?? false)
+                return;
+
+            var appUrl = "http://lazybook.azurewebsites.net";
+
+            Client = new MobileServiceClient(appUrl);
+
+            var path = "syncstore_books.db";
+            path = Path.Combine(MobileServiceClient.DefaultDatabasePath, path);
+
+            //tworzenie lokalnej bazy danych
+            var store = new MobileServiceSQLiteStore(path);
+            //definiowanie tabeli
+            store.DefineTable<Item>();
+
+            //inicjalizownie synchronizacji
+            await Client.SyncContext.InitializeAsync(store, new MobileServiceSyncHandler());
+
+            //tabela polaczona z Azure
+            table = Client.GetSyncTable<Item>();
+        }
+
+        public async Task SyncBooks()
+        {
+            try
+            {
+                await table.PullAsync("allBooks", table.CreateQuery());
+
+                await Client.SyncContext.PushAsync();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("Unable to sync books " + e);
+            }
+
+        }
+
+        public async Task<IEnumerable<Item>> GetBooks()
+        {
+            await Initialize();
+            await SyncBooks();
+
+            return await table.OrderBy(s => s.Name).ToEnumerableAsync();
+            
+        }
+
+        public async Task<Item> AddBook(Item b)
+        {
+            await table.InsertAsync(b);
+
+            //Synchronize coffee
+            await SyncBooks();
+            return b;
+        }
+
+        //-------------------------------------------------------------------------------------------------------
+
         List<Item> items;
 
         public MockDataStore()
