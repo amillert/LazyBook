@@ -4,13 +4,16 @@
              x:Class="LazyBook.Views.LoggingView">
     <ContentPage.Content>
         <StackLayout Margin="20, 0, 20, 0">
-            <Entry Placeholder="E-mail"/>
+            <Entry x:Name="emailEntry"
+                Placeholder="E-mail"/>
             
-            <Entry Placeholder="Password" 
+            <Entry x:Name="passwordEntry"
+                Placeholder="Password" 
                    IsPassword="True"/>
             
             <Button Text="Log In"
                 Clicked="LogIn_Clicked"/>
+            
             <Label Text="or" HorizontalOptions="CenterAndExpand"/>
             
             <Button Text="Sign Up"
