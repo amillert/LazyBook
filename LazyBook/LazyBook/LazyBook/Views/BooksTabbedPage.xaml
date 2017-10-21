@@ -106,8 +106,8 @@
                </Frame>
             </StackLayout>
         </ContentPage.Content>
-    </ContentPage Title="Newest">
-    <ContentPage>
+    </ContentPage>
+    <ContentPage  Title="Newest">
         
     </ContentPage>
 

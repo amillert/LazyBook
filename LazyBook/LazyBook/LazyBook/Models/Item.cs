@@ -3,7 +3,6 @@
 
 namespace LazyBook
 {
-    public enum Cat { Business, Cooking, History, Computers, Detective, Thriller, Kids, Politics, Law, Religion, Romance, Science_Fiction, Health }
 
     public class Item
     {
@@ -23,7 +22,7 @@ namespace LazyBook
         public string Year { get; set; }
 
         [Newtonsoft.Json.JsonProperty("Category")]
-        public Cat Category { get; set; }
+        public string Category { get; set; }
 
         [Newtonsoft.Json.JsonProperty("Summary")]
         public string Summary { get; set; }
@@ -33,7 +32,7 @@ namespace LazyBook
 
         public Item() { }
 
-        public Item(string name, string author, string publisher, string year, Cat category, string summary)
+        public Item(string name, string author, string publisher, string year, string category, string summary)
         {
             this.Name = name;
             this.Author = author;

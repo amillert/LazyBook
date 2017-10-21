@@ -19,11 +19,12 @@ namespace LazyBook.Views
 
         public BooksTabbedPage()
         {
+            
             InitializeComponent();
             this.Title = this.CurrentPage.Title;
             BindingContext = viewModel = new ItemsViewModel();
             this.CurrentPageChanged += CurrentPageHasChanged;
-
+            List<string> list = Helper.Categories;
         }
 
 
