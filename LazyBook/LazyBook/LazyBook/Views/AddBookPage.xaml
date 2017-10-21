@@ -7,16 +7,14 @@
             <Entry x:Name="titleEntry"
                    Placeholder="Add title"/>
             <Entry x:Name="authorEntry"
-                   placeHolder="Add author"/>
+                   Placeholder="Add author"/>
             <Entry x:Name="publisherEntry"
-                   placeHolder="Add publisher"/>
+                   Placeholder="Add publisher"/>
             <Entry x:Name="yearEntry"
-                   placeHolder="Add the year when the book was published"/>
-            <Picker x:name="categories"
-                    ItemsSource=""/>
+                   Placeholder="Add the year when the book was published"/>
+            <Picker x:Name="categoriesPicker"/>
             <Entry x:Name="summaryEntry"
-                   placeHolder="Write down everything you learned from the book"/>
-            <Entry />
+                   Placeholder="Write down everything you learned from the book"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

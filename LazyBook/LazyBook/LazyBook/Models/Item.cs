@@ -4,7 +4,7 @@
 namespace LazyBook
 {
 
-    public class Item
+    public class Item 
     {
         [Newtonsoft.Json.JsonProperty("Id")]
         public string Id { get; set; }

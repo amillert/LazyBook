@@ -9,23 +9,14 @@ using Xamarin.Forms.Xaml;
 
 namespace LazyBook.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class AddBookPage : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class AddBookPage : ContentPage
+    {
         public AddBookPage()
         {
-            //IEnumerable
-            //foreach (var value in Enum.GetValues(typeof(Category)))
-            //{
-            //    value.ToString();
-            //}
-
+            
             InitializeComponent();
-
-            foreach(string cat in Category)
-            {
-                categories.Item.Add();
-            }
+            categoriesPicker.ItemsSource = Models.Helper.Categories;
         }
-	}
+    }
 }
