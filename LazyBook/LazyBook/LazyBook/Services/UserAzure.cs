@@ -41,7 +41,7 @@ namespace LazyBook.Services
 
             //tabela polaczona z Azure
             table = Client.GetSyncTable<User>();
-            users = new List<User>();
+            users = await table.ToListAsync();
         }
 
         public async Task SyncBooks()
@@ -51,6 +51,8 @@ namespace LazyBook.Services
                 await table.PullAsync("allUsers", table.CreateQuery());
 
                 await Client.SyncContext.PushAsync();
+
+                users = await table.ToListAsync();
             }
             catch (Exception e)
             {
@@ -63,14 +65,8 @@ namespace LazyBook.Services
         {
             await Initialize();
             await SyncBooks();
-
             return await table.OrderBy(s => s.UserName).ToEnumerableAsync();
 
-        }
-
-        public async Task<bool> UserExist(string email)
-        {
-            return users.Exists((User u) => u.Email == email);
         }
 
         public async Task<User> AddUser(User u)
