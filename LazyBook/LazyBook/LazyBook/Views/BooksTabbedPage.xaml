@@ -2,7 +2,7 @@
 <TabbedPage  xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LazyBook.Views.BooksTabbedPage"
-	         xmlns:fab="clr-namespace:FAB.Forms;assembly=FAB.Forms"
+             xmlns:fab="clr-namespace:FAB.Forms;assembly=FAB.Forms"
             BarBackgroundColor="White"
             BarTextColor="Black">
     <TabbedPage.ToolbarItems>
@@ -12,7 +12,7 @@
     <ContentPage Title="Featured">
         <ContentPage.Content>
             <StackLayout>
-                    <ListView x:Name="ItemsListView"
+                <ListView x:Name="ItemsListView"
 				ItemsSource="{Binding Items}"
                 HasUnevenRows="true"
                 SeparatorVisibility="None"
@@ -21,11 +21,11 @@
                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                 CachingStrategy="RecycleElement"
 				ItemSelected="OnItemSelected">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <Frame x:Name="Frame" BackgroundColor="White" HasShadow="true" Margin="8">
-                                        <Grid>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame x:Name="Frame" BackgroundColor="White" HasShadow="true" Margin="5,1,5,1">
+                                    <!--<Grid>
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="*" />
                                                 <RowDefinition Height="*" />
@@ -69,50 +69,23 @@
                                                    FontSize="15"
                                                    VerticalTextAlignment="Center"/>
                                             </StackLayout>
-                                        </Grid>
-                                    </Frame>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-            </StackLayout>
-        </ContentPage.Content>
-    </ContentPage>
-    <ContentPage Title="Categories">
-        <ContentPage.Content>
-            <StackLayout>
-                <ListView x:Name="CategoriesListView"
-                HasUnevenRows="true"
-                SeparatorVisibility="None"
-                RefreshCommand="{Binding LoadItemsCommand}"
-                IsPullToRefreshEnabled="true"
-                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                CachingStrategy="RecycleElement"
-				ItemSelected="OnBookSelected">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Frame x:Name="Frame" BackgroundColor="White" HasShadow="true" Margin="8">
+                                        </Grid>-->
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="1*" />
-                                            <ColumnDefinition Width="2*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
                                         </Grid.ColumnDefinitions>
-
-                                        <Image WidthRequest="20" Source="{Binding}" 
-                                                   Grid.Row="0" 
-                                                   Grid.Column="0" />
-                                        <Label Text="{Binding}"
-                                                   LineBreakMode="NoWrap"
-                                                   Style="{DynamicResource ListItemTextStyle}"
-                                                   FontSize="18"
-                                                   TextColor="{StaticResource Secondary}" 
-                                                   Grid.Row="0" 
-                                                   Grid.Column="1" />
-                                       
+                                        <Image WidthRequest="20" HeightRequest="20" Source="logo_LazyBook.png" Grid.RowSpan="3" Margin="4" />
+                                        <Label Text="{Binding Name}" Margin="0,5,0,0" FontSize="20" TextColor="Black" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+                                        <Label Text="{Binding Author}" Margin="0,0,0,5" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" FontSize="16" Grid.Row="1" Grid.Column="1"  Grid.ColumnSpan="2"/>
+                                        <Label Text="{Binding Category}" VerticalTextAlignment="Start"  HorizontalTextAlignment="Start" FontSize="12" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+                                        <Label Text="{Binding Rate}" VerticalTextAlignment="End"  HorizontalTextAlignment="End" FontSize="12" Grid.Row="2" Grid.Column="2"/>
                                     </Grid>
                                 </Frame>
                             </ViewCell>
@@ -122,8 +95,25 @@
             </StackLayout>
         </ContentPage.Content>
     </ContentPage>
+    <ContentPage Title="Categories">
+        <ContentPage.Content>
+            <StackLayout>
+                <ListView x:Name="CategoriesListView"
+				ItemsSource="{Binding Items}"
+                HasUnevenRows="true"
+                SeparatorVisibility="None"
+                RefreshCommand="{Binding LoadItemsCommand}"
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                CachingStrategy="RecycleElement"
+				ItemSelected="OnBookSelected">
+
+                </ListView>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
     <ContentPage  Title="Newest">
-        
+
     </ContentPage>
 
 </TabbedPage>
