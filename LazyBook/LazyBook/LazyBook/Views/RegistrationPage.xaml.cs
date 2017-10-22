@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using LazyBook.Models;
+using LazyBook.ViewModels;
+using LazyBook.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,8 +21,15 @@ namespace LazyBook.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+
+            var azure = new UserAzure();
+            var users = azure.GetUsers();
+            foreach(var user in users.Result)
+            {
+
+            }
             //bool Success = true;
-            
+
             //foreach(var user in Users)
             //{
             //    if (user.username == usernameEntry.Text)
