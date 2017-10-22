@@ -15,30 +15,30 @@ using LazyBook.Services;
 
 namespace LazyBook
 {
-    public class ItemsViewModel : BaseViewModel
+    public class ItemsViewModel
     {
         MockDataStore azureServices;
         public ObservableCollection<Item> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
 
         Item Item { get; set; }
-
+        public bool IsBusy {get;set; }
         public ItemsViewModel()
         {
-            Title = "Browse";
+            //Title = "Browse";
             azureServices = DependencyService.Get<MockDataStore>();
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
-            {
-                var _item = item as Item;
-                Items.Add(_item);
-                await DataStore.AddItemAsync(_item);
-            });
+            //MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
+            //{
+            //    var _item = item as Item;
+            //    Items.Add(_item);
+            //    await DataStore.AddItemAsync(_item);
+            //});
         }
 
-        async Task ExecuteLoadItemsCommand()
+        public async Task ExecuteLoadItemsCommand()
         {
             if (IsBusy)
                 return;
@@ -64,12 +64,13 @@ namespace LazyBook
             }
         }
 
-        async Task ExecuteAddItemCommandAsync()
+        public async Task ExecuteAddItemCommandAsync(Item it)
         {
             if (IsBusy)
                 return;
             try
             {
+                Item = it;
                 var item = await azureServices.AddBook(Item);
                 Items.Add(item);
 
