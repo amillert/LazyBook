@@ -69,6 +69,11 @@ namespace LazyBook.Services
 
         }
 
+        public async Task<List<User>> GetUserList(User user)
+        {
+            return await table.Where((us) => us.Email == user.Email).ToListAsync();
+        }
+
         public async Task<User> AddUser(User u)
         {
             await table.InsertAsync(u);

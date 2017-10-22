@@ -8,6 +8,7 @@ using LazyBook.ViewModels;
 using LazyBook.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Diagnostics;
 
 namespace LazyBook.Views
 {
@@ -36,27 +37,34 @@ namespace LazyBook.Views
             Navigation.PushAsync(new RegistrationPage());
         }
 
-        private void LogIn_Clicked(object sender, EventArgs e)
+        private async void LogIn_Clicked(object sender, EventArgs e)
         {
-            var azure = new UserAzure();
-            var users = azure.GetUsers();
-            var userr = new User();
-
-            //bool Success = true;
-
-            foreach (var user in users.Result)
+            try
             {
-                if (user.Email == emailEntry.Text && user.Password == passwordEntry.Text)
-                {
-                    DisplayAlert("Registration", "Successfully logged in!", "OK");
-                    //Success = true;
-                    OnThresholdReached(EventArgs.Empty);
-                }
+                var azure = new UserAzure();
+                var users = await azure.GetUsers();
+                var userr = new User();
+
+                 //bool Success = true;
+
+                  foreach (var user in users)
+                  {
+                      if (user.Email == emailEntry.Text && user.Password == passwordEntry.Text)
+                      {
+                         await DisplayAlert("Registration", "Successfully logged in!", "OK");
+                         //Success = true;
+                         OnThresholdReached(EventArgs.Empty);
+                      }
+                  }       
+                  emailEntry.Text = String.Empty;
+                  passwordEntry.Text = String.Empty;
+                  //Success = false;
+                  await DisplayAlert("Registration", "Logging in unsuccessfull!", "OK");
             }
-            emailEntry.Text = String.Empty;
-            passwordEntry.Text = String.Empty;
-            //Success = false;
-            DisplayAlert("Registration", "Logging in unsuccessfull!", "OK");
+            catch(Exception ex)
+            {
+                Debug.WriteLine("Wyjatek przy logowaniu: " + ex);
+            }
         }
     }
 }

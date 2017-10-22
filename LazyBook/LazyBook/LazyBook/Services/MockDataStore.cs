@@ -28,14 +28,14 @@ namespace LazyBook
 
             Client = new MobileServiceClient(appUrl);
 
-            var path = "syncstore_books.db";
+            var path = "syncstore_books2.db";
             path = Path.Combine(MobileServiceClient.DefaultDatabasePath, path);
 
             //tworzenie lokalnej bazy danych
             var store = new MobileServiceSQLiteStore(path);
             //definiowanie tabeli
             store.DefineTable<Item>();
-
+   
             //inicjalizownie synchronizacji
             await Client.SyncContext.InitializeAsync(store, new MobileServiceSyncHandler());
 
