@@ -5,6 +5,7 @@
 		<ToolbarItem Text="Save" Clicked="Save_Clicked" />
 	</ContentPage.ToolbarItems>
     <ContentPage.Content>
+        <ScrollView>
             <Frame BackgroundColor="White">
         <StackLayout>
                 <Entry x:Name="titleEntry"
@@ -25,5 +26,6 @@
                    />
         </StackLayout>
             </Frame>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
