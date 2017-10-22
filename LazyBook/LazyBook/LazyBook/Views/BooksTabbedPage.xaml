@@ -89,7 +89,35 @@
                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                 CachingStrategy="RecycleElement"
 				ItemSelected="OnBookSelected">
-                    
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame x:Name="Frame" BackgroundColor="White" HasShadow="true" Margin="8">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="2*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image WidthRequest="20" Source="{Binding}" 
+                                                   Grid.Row="0" 
+                                                   Grid.Column="0" />
+                                        <Label Text="{Binding}"
+                                                   LineBreakMode="NoWrap"
+                                                   Style="{DynamicResource ListItemTextStyle}"
+                                                   FontSize="18"
+                                                   TextColor="{StaticResource Secondary}" 
+                                                   Grid.Row="0" 
+                                                   Grid.Column="1" />
+                                       
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
                 </ListView>
             </StackLayout>
         </ContentPage.Content>
