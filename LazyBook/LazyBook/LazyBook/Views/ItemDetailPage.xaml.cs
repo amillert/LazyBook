@@ -13,11 +13,11 @@ namespace LazyBook
         {
             InitializeComponent();
 
-            var item = new Item
-            {
-                Summary = "Item 1",
-                Year = "This is an item description."
-            };
+            //var item = new Item
+            //{
+            //    Summary = "Item 1",
+            //    Year = "This is an item description."
+            //};
 
             viewModel = new ItemDetailViewModel(item);
             BindingContext = viewModel;
