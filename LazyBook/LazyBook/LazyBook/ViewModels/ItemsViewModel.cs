@@ -30,6 +30,13 @@ namespace LazyBook
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
         }
 
+        public ItemsViewModel(string category)
+        {
+            azureServices = DependencyService.Get<MockDataStore>();
+            Items = new ObservableCollection<Item>();
+            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+        }
+
         public async Task ExecuteLoadItemsCommand()
         {
             if (IsBusy)
