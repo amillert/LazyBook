@@ -9,7 +9,7 @@ namespace LazyBook
 {
     public partial class App : Application
     {
-        bool logged = false;
+        bool logged = true;
         LoggingView loggingView;
         MainMasterDetailPage masterDetail;
 
