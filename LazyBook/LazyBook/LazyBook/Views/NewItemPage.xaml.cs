@@ -32,7 +32,7 @@ namespace LazyBook
             newItem.Category = categoriesPicker.Items[categoriesPicker.SelectedIndex];
             newItem.Summary = summaryEntry.Text;
             newItem.Date = DateTime.UtcNow;
-            newItem.Rate = 4.0f;
+            newItem.Rate = 3.2f;
 
             await ivm.ExecuteAddItemCommandAsync(newItem);
 

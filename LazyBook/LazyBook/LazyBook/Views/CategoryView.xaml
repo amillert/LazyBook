@@ -53,7 +53,7 @@
                                                    Grid.Row="0" 
                                                    Grid.Column="1" />
                                     </Grid>
-                                    <Label Text="{Binding Rate}" HorizontalTextAlignment="Center" FontSize="13" Grid.Row="2" Grid.Column="2" VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding Rate, StringFormat='{0:0.0###########}'}" HorizontalTextAlignment="Center" FontSize="13" Grid.Row="2" Grid.Column="2" VerticalTextAlignment="Center"/>
                                 </Grid>
                             </Frame>
                         </ViewCell>
