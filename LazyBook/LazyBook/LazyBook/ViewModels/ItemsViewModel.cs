@@ -92,6 +92,9 @@ namespace LazyBook
         {
             if (IsBusy)
                 return;
+
+            IsBusy = true;
+
             try
             {
                 Item = it;
@@ -100,6 +103,58 @@ namespace LazyBook
 
                 
             }catch(Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+        public async Task ExecuteSortByAgeAsync()
+        {
+            if (IsBusy)
+                return;
+
+            IsBusy = true;
+
+            try
+            {
+                Items.Clear();
+                var items = await azureServices.GetListSortedByAge();
+                foreach (var _item in items)
+                {
+                    Items.Add(_item);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+        public async Task ExecuteSortByRankAsync()
+        {
+            if (IsBusy)
+                return;
+
+            IsBusy = true;
+
+            try
+            {
+                Items.Clear();
+                var items = await azureServices.GetListSortedByRate();
+                foreach (var _item in items)
+                {
+                    Items.Add(_item);
+                }
+            }
+            catch (Exception ex)
             {
                 Debug.WriteLine(ex);
             }

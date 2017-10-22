@@ -82,6 +82,20 @@ namespace LazyBook
             return itemsSerach;
         }
 
+        public async Task<List<Item>> GetListSortedByAge()
+        {
+            var itemsSerach = await table.ToListAsync();
+            itemsSerach.Sort((Item a, Item b) =>  b.Date.CompareTo(a.Date));
+            return itemsSerach;
+        }
+
+
+        public async Task<List<Item>> GetListSortedByRate()
+        {
+            var itemsSerach = await table.ToListAsync();
+            itemsSerach.Sort((Item a, Item b) => b.Rate.CompareTo(a.Rate));
+            return itemsSerach;
+        }
         //-------------------------------------------------------------------------------------------------------
 
         List<Item> items;
