@@ -78,9 +78,8 @@ namespace LazyBook
 
         public async Task<List<Item>> GetListOfCategories(String category)
         {
-           // await Initialize();
-           // await SyncBooks();
-            return items = table.Where((it) => it.Category == category).ToListAsync().Result;
+            var itemsSerach = await table.Where((it) => it.Category == category).ToListAsync();
+            return itemsSerach;
         }
 
         //-------------------------------------------------------------------------------------------------------
