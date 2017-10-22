@@ -14,7 +14,7 @@ using LazyBook.Models;
 [assembly: Xamarin.Forms.Dependency(typeof(LazyBook.MockDataStore))]
 namespace LazyBook
 {
-    public class MockDataStore //: IDataStore<Item>
+    public class MockDataStore : IDataStore<Item>
     {
         public MobileServiceClient Client { get; set; } = null;
         IMobileServiceSyncTable<Item> table;
