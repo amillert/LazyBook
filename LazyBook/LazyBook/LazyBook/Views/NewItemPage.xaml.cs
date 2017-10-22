@@ -18,6 +18,10 @@ namespace LazyBook
 
         async void Save_Clicked(object sender, EventArgs e)
         {
+            if(titleEntry.Text == null || authorEntry.Text == null || publisherEntry.Text == null || yearEntry.Text == null || categoriesPicker.Items[categoriesPicker.SelectedIndex] == null || summaryEntry.Text == null)
+            {
+                return;
+            }
             ItemsViewModel ivm = new ItemsViewModel();
 
             newItem = new Item();

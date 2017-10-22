@@ -8,15 +8,19 @@
             <Frame BackgroundColor="White">
         <StackLayout>
                 <Entry x:Name="titleEntry"
-                       Placeholder="Add title"/>
+                       Placeholder="Add title"
+                       
+                       />
                 <Entry x:Name="authorEntry"
                        Placeholder="Add author"/>
                 <Entry x:Name="publisherEntry"
                        Placeholder="Add publisher"/>
                 <Entry x:Name="yearEntry"
                        Placeholder="Add the year when the book was published"/>
+                <Label Text="Category" TextColor="{StaticResource Secondary}" FontAttributes="Bold"/>
                 <Picker x:Name="categoriesPicker"
                         SelectedIndex="1"/>
+                <Label Text="Your essention of book" TextColor="{StaticResource Secondary}" FontAttributes="Bold"/>
                 <Editor VerticalOptions="FillAndExpand" x:Name="summaryEntry" 
                    />
         </StackLayout>
