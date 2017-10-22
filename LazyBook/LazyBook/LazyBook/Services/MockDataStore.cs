@@ -76,6 +76,13 @@ namespace LazyBook
             return b;
         }
 
+        public async Task<List<Item>> GetListOfCategories(String category)
+        {
+            await Initialize();
+            await SyncBooks();
+            return items = table.Where((it) => it.Category == category).OrderByDescending(it => it.Date).ToListAsync().Result;
+        }
+
         //-------------------------------------------------------------------------------------------------------
 
         List<Item> items;
@@ -83,18 +90,6 @@ namespace LazyBook
         public MockDataStore()
         {
             items = new List<Item>();
-        }
-
-        public async Task<List<Item>> GetListOfCategories(String category)
-        {
-            return items = table.Where((it) => it.Category == category).OrderByDescending(it => it.Date).ToListAsync().Result;
-        }
-
-        public async Task<bool> AddItemAsync(Item item)
-        {
-            items.Add(item);
-
-            return await Task.FromResult(true);
         }
 
         public async Task<bool> UpdateItemAsync(Item item)
