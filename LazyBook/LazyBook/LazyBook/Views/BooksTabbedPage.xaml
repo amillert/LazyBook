@@ -35,14 +35,14 @@
                                                 <ColumnDefinition Width="1*" />
                                             </Grid.ColumnDefinitions>
 
-                                            <Label Text="{Binding Year}"
+                                            <Label Text="{Binding Name}"
                                                    LineBreakMode="NoWrap"
                                                    Style="{DynamicResource ListItemTextStyle}"
                                                    FontSize="18"
                                                    TextColor="{StaticResource BlackText}" 
                                                    Grid.Row="0" 
                                                    Grid.Column="0" />
-                                            <Label Text="{Binding Author}"
+                                            <Label Text="{Binding Category}"
                                                    LineBreakMode="NoWrap"
                                                    Style="{DynamicResource ListItemDetailTextStyle}"
                                                    FontSize="13"
@@ -53,7 +53,7 @@
                                                    Grid.Row="0" 
                                                    Grid.Column="1">
                                                 <Image WidthRequest="20" Source="route_ico.png"/>
-                                                <Label Text="{Binding Name}"
+                                                <Label Text="{Binding Year}"
                                                    LineBreakMode="NoWrap"
                                                    Style="{DynamicResource ListItemDetailTextStyle}"
                                                    FontSize="15"
@@ -63,7 +63,7 @@
                                                    Grid.Row="1" 
                                                    Grid.Column="1">
                                                 <Image WidthRequest="20" Source="soil_ico.png"/>
-                                                <Label Text="{Binding Name}"
+                                                <Label Text="{Binding Author}"
                                                    LineBreakMode="NoWrap"
                                                    Style="{DynamicResource ListItemDetailTextStyle}"
                                                    FontSize="15"
@@ -81,7 +81,6 @@
     <ContentPage Title="Categories">
         <ContentPage.Content>
             <StackLayout>
-               <Frame x:Name="Frame" BackgroundColor="White" HasShadow="true" Margin="8">
                 <ListView x:Name="CategoriesListView"
 				ItemsSource="{Binding Items}"
                 HasUnevenRows="true"
@@ -91,19 +90,8 @@
                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                 CachingStrategy="RecycleElement"
 				ItemSelected="OnBookSelected">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                    <Label Text="{Binding Category}"
-                                                   LineBreakMode="NoWrap"
-                                                   Style="{DynamicResource ListItemTextStyle}"
-                                                   FontSize="18"
-                                                   TextColor="{StaticResource BlackText}"/>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
+                    
                 </ListView>
-               </Frame>
             </StackLayout>
         </ContentPage.Content>
     </ContentPage>

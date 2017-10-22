@@ -4,7 +4,7 @@
              x:Class="LazyBook.ItemDetailPage"
              Title="{Binding Title}">
 	<StackLayout Spacing="20" Padding="15">
-		<Label Text="{Binding Item.Text}" FontSize="Medium"/>
-        <Label Text="{Binding Item.Description}" FontSize="Small"/>
+		<Label Text="{Binding Item.Author}" FontSize="Medium"/>
+        <Label Text="{Binding Item.Category}" FontSize="Small"/>
     </StackLayout>
 </ContentPage>

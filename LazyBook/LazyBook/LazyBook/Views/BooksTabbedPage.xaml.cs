@@ -19,12 +19,12 @@ namespace LazyBook.Views
 
         public BooksTabbedPage()
         {
-            
             InitializeComponent();
             this.Title = this.CurrentPage.Title;
             BindingContext = viewModel = new ItemsViewModel();
+            CategoriesListView.ItemsSource = Helper.Categories;
+
             this.CurrentPageChanged += CurrentPageHasChanged;
-            List<string> list = Helper.Categories;
         }
 
 
@@ -47,14 +47,13 @@ namespace LazyBook.Views
 
         async void OnBookSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as Item;
+            var item = args.SelectedItem as string;
             if (item == null)
                 return;
-
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+            await Navigation.PushAsync(new CategoryView(new CategoryViewModel(item)));
 
             // Manually deselect item
-            ItemsListView.SelectedItem = null;
+            CategoriesListView.SelectedItem = null;
         }
 
         async void AddButton_Clicked(object sender, EventArgs e)
