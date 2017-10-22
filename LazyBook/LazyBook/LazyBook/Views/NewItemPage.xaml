@@ -17,8 +17,8 @@
                        Placeholder="Add the year when the book was published"/>
                 <Picker x:Name="categoriesPicker"
                         SelectedIndex="1"/>
-                <Entry x:Name="summaryEntry"
-                   Placeholder="Write down everything you learned from the book"/>
+                <Editor VerticalOptions="FillAndExpand" x:Name="summaryEntry" 
+                   />
         </StackLayout>
             </Frame>
     </ContentPage.Content>

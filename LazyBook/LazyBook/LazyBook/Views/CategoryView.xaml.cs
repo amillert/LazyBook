@@ -14,41 +14,40 @@ namespace LazyBook.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CategoryView : ContentPage
     {
-        public ObservableCollection<string> Items { get; set; }
-        CategoryViewModel viewModel;
+        ItemsViewModel viewModel;
 
         public CategoryView()
         {
             InitializeComponent();
 
-            Items = new ObservableCollection<string>
-            {
-                "Item 1",
-                "Item 2",
-                "Item 3",
-                "Item 4",
-                "Item 5"
-            };
-			
-			MyListView.ItemsSource = Items;
+            BindingContext = viewModel = new ItemsViewModel();
         }
 
-        public CategoryView(CategoryViewModel viewModel)
+        public CategoryView(string category)
         {
             InitializeComponent();
-
-            BindingContext = this.viewModel = viewModel;
+            this.Title = category;
+            BindingContext = viewModel = new ItemsViewModel(category);
         }
 
-        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            if (e.Item == null)
+            var item = args.SelectedItem as Item;
+            if (item == null)
                 return;
 
-            await DisplayAlert("Item Tapped", "An item was tapped.", "OK");
+            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
 
-            //Deselect Item
-            ((ListView)sender).SelectedItem = null;
+            // Manually deselect item
+            ItemsListView.SelectedItem = null;
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if (viewModel.Items.Count == 0)
+                viewModel.LoadItemsCommand.Execute(null);
         }
     }
 }

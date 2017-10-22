@@ -50,7 +50,7 @@ namespace LazyBook.Views
             var item = args.SelectedItem as string;
             if (item == null)
                 return;
-            await Navigation.PushAsync(new CategoryView(new CategoryViewModel(item)));
+            await Navigation.PushAsync(new CategoryView(item));
 
             // Manually deselect item
             CategoriesListView.SelectedItem = null;
