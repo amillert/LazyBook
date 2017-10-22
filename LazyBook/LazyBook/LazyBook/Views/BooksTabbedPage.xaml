@@ -82,7 +82,6 @@
         <ContentPage.Content>
             <StackLayout>
                 <ListView x:Name="CategoriesListView"
-				ItemsSource="{Binding Items}"
                 HasUnevenRows="true"
                 SeparatorVisibility="None"
                 RefreshCommand="{Binding LoadItemsCommand}"
