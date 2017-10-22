@@ -1,15 +1,21 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Plugin.TextToSpeech;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
-namespace LazyBook
+namespace LazyBook.Views
 {
-    public partial class ItemDetailPage : ContentPage
-    {
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class ReaderPage : ContentPage
+	{
         ItemDetailViewModel viewModel;
 
         // Note - The Xamarin.Forms Previewer requires a default, parameterless constructor to render a page.
-        public ItemDetailPage()
+        public ReaderPage()
         {
             InitializeComponent();
 
@@ -19,16 +25,16 @@ namespace LazyBook
             BindingContext = viewModel;
         }
 
-        public ItemDetailPage(ItemDetailViewModel viewModel)
+        public ReaderPage(ItemDetailViewModel viewModel)
         {
             InitializeComponent();
 
             BindingContext = this.viewModel = viewModel;
         }
 
-        private void ButtonReadMore_Clicked(object sender, EventArgs e)
+        private void ReaderButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Views.ReaderPage(viewModel));
+            CrossTextToSpeech.Current.Speak(this.viewModel.Item.Summary);
         }
     }
 }
