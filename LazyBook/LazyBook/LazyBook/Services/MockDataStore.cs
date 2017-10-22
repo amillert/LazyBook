@@ -85,6 +85,11 @@ namespace LazyBook
             items = new List<Item>();
         }
 
+        public async Task<List<Item>> GetListOfCategories(String category)
+        {
+            return items = table.Where((it) => it.Category == category).OrderByDescending(it => it.Date).ToListAsync().Result;
+        }
+
         public async Task<bool> AddItemAsync(Item item)
         {
             items.Add(item);
