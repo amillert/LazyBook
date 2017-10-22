@@ -37,6 +37,7 @@ namespace LazyBook.Views
             var azure = new UserAzure();
             var users = azure.GetUsers();
             var userr = new User();
+
             foreach(var user in users.Result)
             {
                 if(user.UserName == usernameEntry.Text)
@@ -59,6 +60,7 @@ namespace LazyBook.Views
             {
                 await DisplayAlert("Regitration", "Passwords don't match!", "OK");
                 passwordEntry.Text = String.Empty;
+                password2Entry.Text = String.Empty;
                 Success = false;
             }
             if(Success == true)
