@@ -83,23 +83,6 @@ namespace LazyBook
         public MockDataStore()
         {
             items = new List<Item>();
-            var mockItems = new List<Item>
-            {
-                new Item { Id = Guid.NewGuid().ToString() , Name = "Ksiazka", Author = "Marcin", Publisher = "Bartek", Year = "2017", Category = Models.Helper.Categories[1] , Summary = "Zajebista ksiazka!!!111one" },
-                new Item { Id = Guid.NewGuid().ToString() , Name = "Ksiazka", Author = "Marcin", Publisher = "Bartek", Year = "2017", Category = Models.Helper.Categories[1] , Summary = "Zajebista ksiazka!!!111one" },
-                new Item { Id = Guid.NewGuid().ToString() , Name = "Ksiazka", Author = "Marcin", Publisher = "Bartek", Year = "2017", Category = Models.Helper.Categories[1] , Summary = "Zajebista ksiazka!!!111one" },
-                new Item { Id = Guid.NewGuid().ToString() , Name = "Ksiazka", Author = "Marcin", Publisher = "Bartek", Year = "2017", Category = Models.Helper.Categories[1] , Summary = "Zajebista ksiazka!!!111one" },
-                new Item { Id = Guid.NewGuid().ToString() , Name = "Ksiazka", Author = "Marcin", Publisher = "Bartek", Year = "2017", Category = Models.Helper.Categories[1] , Summary = "Zajebista ksiazka!!!111one" },
-                new Item { Id = Guid.NewGuid().ToString() , Name = "Ksiazka", Author = "Marcin", Publisher = "Bartek", Year = "2017", Category = Models.Helper.Categories[1] , Summary = "Zajebista ksiazka!!!111one" },
-                new Item { Id = Guid.NewGuid().ToString() , Name = "Ksiazka", Author = "Marcin", Publisher = "Bartek", Year = "2017", Category = Models.Helper.Categories[1] , Summary = "Zajebista ksiazka!!!111one" },
-                new Item { Id = Guid.NewGuid().ToString() , Name = "Ksiazka", Author = "Marcin", Publisher = "Bartek", Year = "2017", Category = Models.Helper.Categories[1] , Summary = "Zajebista ksiazka!!!111one" },
-                new Item { Id = Guid.NewGuid().ToString() , Name = "Ksiazka", Author = "Marcin", Publisher = "Bartek", Year = "2017", Category = Models.Helper.Categories[1] , Summary = "Zajebista ksiazka!!!111one" }
-            };
-
-            foreach (var item in mockItems)
-            {
-                items.Add(item);
-            }
         }
 
         public async Task<bool> AddItemAsync(Item item)
