@@ -4534,7 +4534,7 @@ namespace LazyBook.Droid
 			public const int Romance = 2130837786;
 			
 			// aapt resource value: 0x7f02011b
-			public const int Science_Fiction = 2130837787;
+			public const int SciFi = 2130837787;
 			
 			// aapt resource value: 0x7f02011c
 			public const int Thriller = 2130837788;

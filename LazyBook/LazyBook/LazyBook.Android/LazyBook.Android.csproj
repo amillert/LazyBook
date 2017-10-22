@@ -234,7 +234,7 @@
     <AndroidResource Include="Resources\drawable\Romance.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Science_Fiction.png" />
+    <AndroidResource Include="Resources\drawable\SciFi.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Thriller.png" />
