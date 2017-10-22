@@ -39,8 +39,28 @@
                                         <Image WidthRequest="15" HeightRequest="15" Margin="0" Source="logo_LazyBook.png" Grid.RowSpan="3" Grid.Row="0" Grid.Column="0"/>
                                         <Label Text="{Binding Name}" LineBreakMode="TailTruncation" FontSize="16" TextColor="Black" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
                                         <Label Text="{Binding Author}" VerticalOptions="Start" LineBreakMode="TailTruncation" FontSize="12" Grid.Row="1" Grid.Column="1"  Grid.ColumnSpan="2"/>
-                                        <Label Text="{Binding Category}" FontSize="13" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
-                                        <Label Text="{Binding Rate}" HorizontalTextAlignment="Center" FontSize="13" Grid.Row="2" Grid.Column="2"/>
+                                        <Grid Grid.Row="2" Grid.Column="1" >
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="1*" />
+                                                <ColumnDefinition Width="4*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <Image WidthRequest="13" Source="{Binding Category}" 
+                                                   Grid.Row="0" 
+                                                   Grid.Column="0" />
+                                            <Label Text="{Binding Category}"
+                                                   VerticalTextAlignment="Center"
+                                                   LineBreakMode="NoWrap"
+                                                   Style="{DynamicResource ListItemTextStyle}"
+                                                   FontSize="13"
+                                                   TextColor="{StaticResource Secondary}" 
+                                                   Grid.Row="0" 
+                                                   Grid.Column="1" />
+                                        </Grid>
+                                        <Label Text="{Binding Rate}" HorizontalTextAlignment="Center" FontSize="13" Grid.Row="2" Grid.Column="2" VerticalTextAlignment="Center"/>
                                     </Grid>
                                 </Frame>
                             </ViewCell>
