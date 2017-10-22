@@ -11,13 +11,13 @@ using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 using System.Diagnostics;
 using LazyBook.Models;
 
-[assembly: Xamarin.Forms.Dependency(typeof(LazyBook.MockDataStore))]
-namespace LazyBook
+namespace LazyBook.Services
 {
-    public class MockDataStore : IDataStore<Item>
+    class UserAzure : IDataStore<User>
     {
         public MobileServiceClient Client { get; set; } = null;
-        IMobileServiceSyncTable<Item> table;
+        IMobileServiceSyncTable<User> table;
+        List<User> users;
 
         public async Task Initialize()
         {
@@ -28,7 +28,7 @@ namespace LazyBook
 
             Client = new MobileServiceClient(appUrl);
 
-            var path = "syncstore_books.db";
+            var path = "syncstore_users.db";
             path = Path.Combine(MobileServiceClient.DefaultDatabasePath, path);
 
             //tworzenie lokalnej bazy danych
@@ -40,83 +40,83 @@ namespace LazyBook
             await Client.SyncContext.InitializeAsync(store, new MobileServiceSyncHandler());
 
             //tabela polaczona z Azure
-            table = Client.GetSyncTable<Item>();
+            table = Client.GetSyncTable<User>();
+            users = new List<User>();
         }
 
         public async Task SyncBooks()
         {
             try
             {
-                await table.PullAsync("allBooks", table.CreateQuery());
+                await table.PullAsync("allUsers", table.CreateQuery());
 
                 await Client.SyncContext.PushAsync();
             }
             catch (Exception e)
             {
-                Debug.WriteLine("Unable to sync books " + e);
+                Debug.WriteLine("Unable to sync users " + e);
             }
 
         }
 
-        public async Task<IEnumerable<Item>> GetBooks()
+        public async Task<IEnumerable<User>> GetUsers()
         {
             await Initialize();
             await SyncBooks();
 
-            return await table.OrderBy(s => s.Name).ToEnumerableAsync();
-            
+            return await table.OrderBy(s => s.UserName).ToEnumerableAsync();
+
         }
 
-        public async Task<Item> AddBook(Item b)
+        public async Task<bool> UserExist(string email)
         {
-            await table.InsertAsync(b);
+            return users.Exists((User u) => u.Email == email);
+        }
 
-            //Synchronize coffee
+        public async Task<User> AddUser(User u)
+        {
+            await table.InsertAsync(u);
+            //Synchronize Users
             await SyncBooks();
-            return b;
+            return u;
         }
 
-        //-------------------------------------------------------------------------------------------------------
-
-        List<Item> items;
-
-        public MockDataStore()
+        public UserAzure()
         {
-            items = new List<Item>();
+            users = new List<User>();
         }
 
-        public async Task<bool> AddItemAsync(Item item)
+        public async Task<bool> AddItemAsync(User user)
         {
-            items.Add(item);
-
+            users.Add(user);
             return await Task.FromResult(true);
         }
 
-        public async Task<bool> UpdateItemAsync(Item item)
+        public async Task<bool> UpdateItemAsync(User user)
         {
-            var _item = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
-            items.Remove(_item);
-            items.Add(item);
+            var _item = users.Where((User arg) => arg.Id == user.Id).FirstOrDefault();
+            users.Remove(_item);
+            users.Add(user);
 
             return await Task.FromResult(true);
         }
 
         public async Task<bool> DeleteItemAsync(string id)
         {
-            var _item = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
-            items.Remove(_item);
+            var _item = users.Where((User arg) => arg.Id == id).FirstOrDefault();
+            users.Remove(_item);
 
             return await Task.FromResult(true);
         }
 
-        public async Task<Item> GetItemAsync(string id)
+        public async Task<User> GetItemAsync(string id)
         {
-            return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
+            return await Task.FromResult(users.FirstOrDefault(s => s.Id == id));
         }
 
-        public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
+        public async Task<IEnumerable<User>> GetItemsAsync(bool forceRefresh = false)
         {
-            return await Task.FromResult(items);
+            return await Task.FromResult(users);
         }
     }
 }

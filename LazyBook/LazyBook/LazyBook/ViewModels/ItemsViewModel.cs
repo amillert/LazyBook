@@ -25,17 +25,9 @@ namespace LazyBook
         public bool IsBusy {get;set; }
         public ItemsViewModel()
         {
-            //Title = "Browse";
             azureServices = DependencyService.Get<MockDataStore>();
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
-
-            //MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
-            //{
-            //    var _item = item as Item;
-            //    Items.Add(_item);
-            //    await DataStore.AddItemAsync(_item);
-            //});
         }
 
         public async Task ExecuteLoadItemsCommand()

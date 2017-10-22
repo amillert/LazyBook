@@ -27,6 +27,11 @@ namespace LazyBook
         [Newtonsoft.Json.JsonProperty("Summary")]
         public string Summary { get; set; }
 
+        public DateTime Date { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("Rate")]
+        public float Rate { get; set; }
+
         [Microsoft.WindowsAzure.MobileServices.Version]
         public string AzureVersion { get; set; }
 

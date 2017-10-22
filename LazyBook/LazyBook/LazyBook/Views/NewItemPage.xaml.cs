@@ -27,10 +27,10 @@ namespace LazyBook
             newItem.Year = yearEntry.Text;
             newItem.Category = categoriesPicker.Items[categoriesPicker.SelectedIndex];
             newItem.Summary = summaryEntry.Text;
+            newItem.Date = DateTime.UtcNow;
+            newItem.Rate = 4.0f;
 
-            ivm.ExecuteAddItemCommandAsync(newItem);
-            //ivm.Items.Add(newItem);
-
+            await ivm.ExecuteAddItemCommandAsync(newItem);
 
             MessagingCenter.Send(this, "AddItem");
             await Navigation.PopToRootAsync();
