@@ -33,11 +33,10 @@ namespace LazyBook.Views
             {
                 MenuItems = new ObservableCollection<MainMasterDetailPageMenuItem>(new[]
                 {
-                    new MainMasterDetailPageMenuItem { Id = 0, Title = "Page 1" },
-                    new MainMasterDetailPageMenuItem { Id = 1, Title = "Page 2" },
-                    new MainMasterDetailPageMenuItem { Id = 2, Title = "Page 3" },
-                    new MainMasterDetailPageMenuItem { Id = 3, Title = "Page 4" },
-                    new MainMasterDetailPageMenuItem { Id = 4, Title = "Page 5" },
+                    new MainMasterDetailPageMenuItem { Id = 0, Title = "Books", TargetType = typeof(BooksTabbedPage) },
+                    new MainMasterDetailPageMenuItem { Id = 1, Title = "Waiting room", TargetType = typeof(BooksTabbedPage) },
+                    new MainMasterDetailPageMenuItem { Id = 4, Title = "Settings",  TargetType = typeof(AboutPage) },
+                    new MainMasterDetailPageMenuItem { Id = 4, Title = "About",TargetType = typeof(AboutPage) }
                 });
             }
 

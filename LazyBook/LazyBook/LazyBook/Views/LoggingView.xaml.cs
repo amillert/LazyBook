@@ -37,7 +37,8 @@ namespace LazyBook.Views
         private void LogIn_Clicked(object sender, EventArgs e)
         {
             bool Success = true;
-                    OnThresholdReached(EventArgs.Empty);
+
+            OnThresholdReached(EventArgs.Empty);
 
             //foreach(var user in Users)
             //{
