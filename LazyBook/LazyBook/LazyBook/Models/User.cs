@@ -17,8 +17,10 @@ namespace LazyBook.Models
         [Newtonsoft.Json.JsonProperty("Password")]
         public string Password { get; set; }
 
-        [Newtonsoft.Json.JsonProperty("Email")]
+        [Newtonsoft.Json.JsonProperty("UserName")]
         public string UserName { get; set; }
+
+        public User() { }
 
         public User(string email, string password, string userName)
         {
