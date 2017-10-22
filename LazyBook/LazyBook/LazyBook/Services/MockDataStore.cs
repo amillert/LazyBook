@@ -14,7 +14,7 @@ using LazyBook.Models;
 [assembly: Xamarin.Forms.Dependency(typeof(LazyBook.MockDataStore))]
 namespace LazyBook
 {
-    public class MockDataStore : IDataStore<Item>
+    public class MockDataStore //: IDataStore<Item>
     {
         public MobileServiceClient Client { get; set; } = null;
         IMobileServiceSyncTable<Item> table;
@@ -117,6 +117,11 @@ namespace LazyBook
         public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(items);
+        }
+
+        public Task<bool> AddItemAsync(Item item)
+        {
+            throw new NotImplementedException();
         }
     }
 }
