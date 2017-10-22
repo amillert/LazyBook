@@ -27,8 +27,8 @@ namespace LazyBook
             newItem.Year = yearEntry.Text;
             newItem.Category = categoriesPicker.Items[categoriesPicker.SelectedIndex];
             newItem.Summary = summaryEntry.Text;
-
-            ivm.ExecuteAddItemCommandAsync(newItem);
+            
+            await ivm.ExecuteAddItemCommandAsync(newItem);
             //ivm.Items.Add(newItem);
 
 
