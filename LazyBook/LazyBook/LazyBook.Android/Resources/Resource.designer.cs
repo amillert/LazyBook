@@ -2875,44 +2875,44 @@ namespace LazyBook.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0c004b
-			public const int abc_background_cache_hint_selector_material_dark = 2131492939;
-			
-			// aapt resource value: 0x7f0c004c
-			public const int abc_background_cache_hint_selector_material_light = 2131492940;
-			
-			// aapt resource value: 0x7f0c004d
-			public const int abc_btn_colored_borderless_text_material = 2131492941;
-			
-			// aapt resource value: 0x7f0c004e
-			public const int abc_btn_colored_text_material = 2131492942;
-			
-			// aapt resource value: 0x7f0c004f
-			public const int abc_color_highlight_material = 2131492943;
-			
 			// aapt resource value: 0x7f0c0050
-			public const int abc_hint_foreground_material_dark = 2131492944;
+			public const int abc_background_cache_hint_selector_material_dark = 2131492944;
 			
 			// aapt resource value: 0x7f0c0051
-			public const int abc_hint_foreground_material_light = 2131492945;
+			public const int abc_background_cache_hint_selector_material_light = 2131492945;
+			
+			// aapt resource value: 0x7f0c0052
+			public const int abc_btn_colored_borderless_text_material = 2131492946;
+			
+			// aapt resource value: 0x7f0c0053
+			public const int abc_btn_colored_text_material = 2131492947;
+			
+			// aapt resource value: 0x7f0c0054
+			public const int abc_color_highlight_material = 2131492948;
+			
+			// aapt resource value: 0x7f0c0055
+			public const int abc_hint_foreground_material_dark = 2131492949;
+			
+			// aapt resource value: 0x7f0c0056
+			public const int abc_hint_foreground_material_light = 2131492950;
 			
 			// aapt resource value: 0x7f0c0005
 			public const int abc_input_method_navigation_guard = 2131492869;
 			
-			// aapt resource value: 0x7f0c0052
-			public const int abc_primary_text_disable_only_material_dark = 2131492946;
+			// aapt resource value: 0x7f0c0057
+			public const int abc_primary_text_disable_only_material_dark = 2131492951;
 			
-			// aapt resource value: 0x7f0c0053
-			public const int abc_primary_text_disable_only_material_light = 2131492947;
+			// aapt resource value: 0x7f0c0058
+			public const int abc_primary_text_disable_only_material_light = 2131492952;
 			
-			// aapt resource value: 0x7f0c0054
-			public const int abc_primary_text_material_dark = 2131492948;
+			// aapt resource value: 0x7f0c0059
+			public const int abc_primary_text_material_dark = 2131492953;
 			
-			// aapt resource value: 0x7f0c0055
-			public const int abc_primary_text_material_light = 2131492949;
+			// aapt resource value: 0x7f0c005a
+			public const int abc_primary_text_material_light = 2131492954;
 			
-			// aapt resource value: 0x7f0c0056
-			public const int abc_search_url_text = 2131492950;
+			// aapt resource value: 0x7f0c005b
+			public const int abc_search_url_text = 2131492955;
 			
 			// aapt resource value: 0x7f0c0006
 			public const int abc_search_url_text_normal = 2131492870;
@@ -2923,32 +2923,35 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f0c0008
 			public const int abc_search_url_text_selected = 2131492872;
 			
-			// aapt resource value: 0x7f0c0057
-			public const int abc_secondary_text_material_dark = 2131492951;
-			
-			// aapt resource value: 0x7f0c0058
-			public const int abc_secondary_text_material_light = 2131492952;
-			
-			// aapt resource value: 0x7f0c0059
-			public const int abc_tint_btn_checkable = 2131492953;
-			
-			// aapt resource value: 0x7f0c005a
-			public const int abc_tint_default = 2131492954;
-			
-			// aapt resource value: 0x7f0c005b
-			public const int abc_tint_edittext = 2131492955;
-			
 			// aapt resource value: 0x7f0c005c
-			public const int abc_tint_seek_thumb = 2131492956;
+			public const int abc_secondary_text_material_dark = 2131492956;
 			
 			// aapt resource value: 0x7f0c005d
-			public const int abc_tint_spinner = 2131492957;
+			public const int abc_secondary_text_material_light = 2131492957;
 			
 			// aapt resource value: 0x7f0c005e
-			public const int abc_tint_switch_thumb = 2131492958;
+			public const int abc_tint_btn_checkable = 2131492958;
 			
 			// aapt resource value: 0x7f0c005f
-			public const int abc_tint_switch_track = 2131492959;
+			public const int abc_tint_default = 2131492959;
+			
+			// aapt resource value: 0x7f0c0060
+			public const int abc_tint_edittext = 2131492960;
+			
+			// aapt resource value: 0x7f0c0061
+			public const int abc_tint_seek_thumb = 2131492961;
+			
+			// aapt resource value: 0x7f0c0062
+			public const int abc_tint_spinner = 2131492962;
+			
+			// aapt resource value: 0x7f0c0063
+			public const int abc_tint_switch_thumb = 2131492963;
+			
+			// aapt resource value: 0x7f0c0064
+			public const int abc_tint_switch_track = 2131492964;
+			
+			// aapt resource value: 0x7f0c004d
+			public const int accent = 2131492941;
 			
 			// aapt resource value: 0x7f0c0009
 			public const int accent_material_dark = 2131492873;
@@ -3007,8 +3010,8 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f0c003f
 			public const int design_bottom_navigation_shadow_color = 2131492927;
 			
-			// aapt resource value: 0x7f0c0060
-			public const int design_error = 2131492960;
+			// aapt resource value: 0x7f0c0065
+			public const int design_error = 2131492965;
 			
 			// aapt resource value: 0x7f0c0040
 			public const int design_fab_shadow_end_color = 2131492928;
@@ -3040,8 +3043,8 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f0c0049
 			public const int design_textinput_error_color_light = 2131492937;
 			
-			// aapt resource value: 0x7f0c0061
-			public const int design_tint_password_toggle = 2131492961;
+			// aapt resource value: 0x7f0c0066
+			public const int design_tint_password_toggle = 2131492966;
 			
 			// aapt resource value: 0x7f0c0017
 			public const int dim_foreground_disabled_material_dark = 2131492887;
@@ -3115,6 +3118,12 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f0c002c
 			public const int notification_material_background_media_default_color = 2131492908;
 			
+			// aapt resource value: 0x7f0c004b
+			public const int primary = 2131492939;
+			
+			// aapt resource value: 0x7f0c004c
+			public const int primaryDark = 2131492940;
+			
 			// aapt resource value: 0x7f0c002d
 			public const int primary_dark_material_dark = 2131492909;
 			
@@ -3157,23 +3166,29 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f0c003a
 			public const int secondary_text_disabled_material_light = 2131492922;
 			
+			// aapt resource value: 0x7f0c004f
+			public const int splash_background = 2131492943;
+			
 			// aapt resource value: 0x7f0c003b
 			public const int switch_thumb_disabled_material_dark = 2131492923;
 			
 			// aapt resource value: 0x7f0c003c
 			public const int switch_thumb_disabled_material_light = 2131492924;
 			
-			// aapt resource value: 0x7f0c0062
-			public const int switch_thumb_material_dark = 2131492962;
+			// aapt resource value: 0x7f0c0067
+			public const int switch_thumb_material_dark = 2131492967;
 			
-			// aapt resource value: 0x7f0c0063
-			public const int switch_thumb_material_light = 2131492963;
+			// aapt resource value: 0x7f0c0068
+			public const int switch_thumb_material_light = 2131492968;
 			
 			// aapt resource value: 0x7f0c003d
 			public const int switch_thumb_normal_material_dark = 2131492925;
 			
 			// aapt resource value: 0x7f0c003e
 			public const int switch_thumb_normal_material_light = 2131492926;
+			
+			// aapt resource value: 0x7f0c004e
+			public const int window_background = 2131492942;
 			
 			static Color()
 			{
@@ -3915,26 +3930,26 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f020122
-			public const int avd_hide_password_1 = 2130837794;
-			
-			// aapt resource value: 0x7f020123
-			public const int avd_hide_password_2 = 2130837795;
-			
 			// aapt resource value: 0x7f020124
-			public const int avd_hide_password_3 = 2130837796;
+			public const int avd_hide_password_1 = 2130837796;
+			
+			// aapt resource value: 0x7f020125
+			public const int avd_hide_password_2 = 2130837797;
+			
+			// aapt resource value: 0x7f020126
+			public const int avd_hide_password_3 = 2130837798;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_show_password = 2130837589;
 			
-			// aapt resource value: 0x7f020125
-			public const int avd_show_password_1 = 2130837797;
-			
-			// aapt resource value: 0x7f020126
-			public const int avd_show_password_2 = 2130837798;
-			
 			// aapt resource value: 0x7f020127
-			public const int avd_show_password_3 = 2130837799;
+			public const int avd_show_password_1 = 2130837799;
+			
+			// aapt resource value: 0x7f020128
+			public const int avd_show_password_2 = 2130837800;
+			
+			// aapt resource value: 0x7f020129
+			public const int avd_show_password_3 = 2130837801;
 			
 			// aapt resource value: 0x7f020056
 			public const int Business = 2130837590;
@@ -4432,121 +4447,127 @@ namespace LazyBook.Droid
 			public const int logo_LazyBook = 2130837754;
 			
 			// aapt resource value: 0x7f0200fb
-			public const int mr_button_connected_dark = 2130837755;
+			public const int logo_nobackground = 2130837755;
 			
 			// aapt resource value: 0x7f0200fc
-			public const int mr_button_connected_light = 2130837756;
+			public const int mr_button_connected_dark = 2130837756;
 			
 			// aapt resource value: 0x7f0200fd
-			public const int mr_button_connecting_dark = 2130837757;
+			public const int mr_button_connected_light = 2130837757;
 			
 			// aapt resource value: 0x7f0200fe
-			public const int mr_button_connecting_light = 2130837758;
+			public const int mr_button_connecting_dark = 2130837758;
 			
 			// aapt resource value: 0x7f0200ff
-			public const int mr_button_dark = 2130837759;
+			public const int mr_button_connecting_light = 2130837759;
 			
 			// aapt resource value: 0x7f020100
-			public const int mr_button_light = 2130837760;
+			public const int mr_button_dark = 2130837760;
 			
 			// aapt resource value: 0x7f020101
-			public const int mr_dialog_close_dark = 2130837761;
+			public const int mr_button_light = 2130837761;
 			
 			// aapt resource value: 0x7f020102
-			public const int mr_dialog_close_light = 2130837762;
+			public const int mr_dialog_close_dark = 2130837762;
 			
 			// aapt resource value: 0x7f020103
-			public const int mr_dialog_material_background_dark = 2130837763;
+			public const int mr_dialog_close_light = 2130837763;
 			
 			// aapt resource value: 0x7f020104
-			public const int mr_dialog_material_background_light = 2130837764;
+			public const int mr_dialog_material_background_dark = 2130837764;
 			
 			// aapt resource value: 0x7f020105
-			public const int mr_group_collapse = 2130837765;
+			public const int mr_dialog_material_background_light = 2130837765;
 			
 			// aapt resource value: 0x7f020106
-			public const int mr_group_expand = 2130837766;
+			public const int mr_group_collapse = 2130837766;
 			
 			// aapt resource value: 0x7f020107
-			public const int mr_media_pause_dark = 2130837767;
+			public const int mr_group_expand = 2130837767;
 			
 			// aapt resource value: 0x7f020108
-			public const int mr_media_pause_light = 2130837768;
+			public const int mr_media_pause_dark = 2130837768;
 			
 			// aapt resource value: 0x7f020109
-			public const int mr_media_play_dark = 2130837769;
+			public const int mr_media_pause_light = 2130837769;
 			
 			// aapt resource value: 0x7f02010a
-			public const int mr_media_play_light = 2130837770;
+			public const int mr_media_play_dark = 2130837770;
 			
 			// aapt resource value: 0x7f02010b
-			public const int mr_media_stop_dark = 2130837771;
+			public const int mr_media_play_light = 2130837771;
 			
 			// aapt resource value: 0x7f02010c
-			public const int mr_media_stop_light = 2130837772;
+			public const int mr_media_stop_dark = 2130837772;
 			
 			// aapt resource value: 0x7f02010d
-			public const int mr_vol_type_audiotrack_dark = 2130837773;
+			public const int mr_media_stop_light = 2130837773;
 			
 			// aapt resource value: 0x7f02010e
-			public const int mr_vol_type_audiotrack_light = 2130837774;
+			public const int mr_vol_type_audiotrack_dark = 2130837774;
 			
 			// aapt resource value: 0x7f02010f
-			public const int navigation_empty_icon = 2130837775;
+			public const int mr_vol_type_audiotrack_light = 2130837775;
 			
 			// aapt resource value: 0x7f020110
-			public const int notification_action_background = 2130837776;
+			public const int navigation_empty_icon = 2130837776;
 			
 			// aapt resource value: 0x7f020111
-			public const int notification_bg = 2130837777;
+			public const int notification_action_background = 2130837777;
 			
 			// aapt resource value: 0x7f020112
-			public const int notification_bg_low = 2130837778;
+			public const int notification_bg = 2130837778;
 			
 			// aapt resource value: 0x7f020113
-			public const int notification_bg_low_normal = 2130837779;
+			public const int notification_bg_low = 2130837779;
 			
 			// aapt resource value: 0x7f020114
-			public const int notification_bg_low_pressed = 2130837780;
+			public const int notification_bg_low_normal = 2130837780;
 			
 			// aapt resource value: 0x7f020115
-			public const int notification_bg_normal = 2130837781;
+			public const int notification_bg_low_pressed = 2130837781;
 			
 			// aapt resource value: 0x7f020116
-			public const int notification_bg_normal_pressed = 2130837782;
+			public const int notification_bg_normal = 2130837782;
 			
 			// aapt resource value: 0x7f020117
-			public const int notification_icon_background = 2130837783;
-			
-			// aapt resource value: 0x7f020120
-			public const int notification_template_icon_bg = 2130837792;
-			
-			// aapt resource value: 0x7f020121
-			public const int notification_template_icon_low_bg = 2130837793;
+			public const int notification_bg_normal_pressed = 2130837783;
 			
 			// aapt resource value: 0x7f020118
-			public const int notification_tile_bg = 2130837784;
+			public const int notification_icon_background = 2130837784;
+			
+			// aapt resource value: 0x7f020122
+			public const int notification_template_icon_bg = 2130837794;
+			
+			// aapt resource value: 0x7f020123
+			public const int notification_template_icon_low_bg = 2130837795;
 			
 			// aapt resource value: 0x7f020119
-			public const int notify_panel_notification_icon_bg = 2130837785;
+			public const int notification_tile_bg = 2130837785;
 			
 			// aapt resource value: 0x7f02011a
-			public const int Politics = 2130837786;
+			public const int notify_panel_notification_icon_bg = 2130837786;
 			
 			// aapt resource value: 0x7f02011b
-			public const int Religion = 2130837787;
+			public const int Politics = 2130837787;
 			
 			// aapt resource value: 0x7f02011c
-			public const int Romance = 2130837788;
+			public const int Religion = 2130837788;
 			
 			// aapt resource value: 0x7f02011d
-			public const int SciFi = 2130837789;
+			public const int Romance = 2130837789;
 			
 			// aapt resource value: 0x7f02011e
-			public const int Thriller = 2130837790;
+			public const int SciFi = 2130837790;
 			
 			// aapt resource value: 0x7f02011f
-			public const int xamarin_logo = 2130837791;
+			public const int splash_screen = 2130837791;
+			
+			// aapt resource value: 0x7f020120
+			public const int Thriller = 2130837792;
+			
+			// aapt resource value: 0x7f020121
+			public const int xamarin_logo = 2130837793;
 			
 			static Drawable()
 			{
@@ -4561,8 +4582,11 @@ namespace LazyBook.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f08009f
-			public const int action0 = 2131230879;
+			// aapt resource value: 0x7f080082
+			public const int MyButton = 2131230850;
+			
+			// aapt resource value: 0x7f0800a0
+			public const int action0 = 2131230880;
 			
 			// aapt resource value: 0x7f080064
 			public const int action_bar = 2131230820;
@@ -4585,17 +4609,17 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f080041
 			public const int action_bar_title = 2131230785;
 			
-			// aapt resource value: 0x7f08009c
-			public const int action_container = 2131230876;
+			// aapt resource value: 0x7f08009d
+			public const int action_container = 2131230877;
 			
 			// aapt resource value: 0x7f080065
 			public const int action_context_bar = 2131230821;
 			
-			// aapt resource value: 0x7f0800a3
-			public const int action_divider = 2131230883;
+			// aapt resource value: 0x7f0800a4
+			public const int action_divider = 2131230884;
 			
-			// aapt resource value: 0x7f08009d
-			public const int action_image = 2131230877;
+			// aapt resource value: 0x7f08009e
+			public const int action_image = 2131230878;
 			
 			// aapt resource value: 0x7f080003
 			public const int action_menu_divider = 2131230723;
@@ -4612,11 +4636,11 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f080043
 			public const int action_mode_close_button = 2131230787;
 			
-			// aapt resource value: 0x7f08009e
-			public const int action_text = 2131230878;
+			// aapt resource value: 0x7f08009f
+			public const int action_text = 2131230879;
 			
-			// aapt resource value: 0x7f0800ac
-			public const int actions = 2131230892;
+			// aapt resource value: 0x7f0800ad
+			public const int actions = 2131230893;
 			
 			// aapt resource value: 0x7f080044
 			public const int activity_chooser_view_content = 2131230788;
@@ -4645,8 +4669,8 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f08004b
 			public const int buttonPanel = 2131230795;
 			
-			// aapt resource value: 0x7f0800a0
-			public const int cancel_action = 2131230880;
+			// aapt resource value: 0x7f0800a1
+			public const int cancel_action = 2131230881;
 			
 			// aapt resource value: 0x7f080030
 			public const int center = 2131230768;
@@ -4660,8 +4684,8 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f08005b
 			public const int checkbox = 2131230811;
 			
-			// aapt resource value: 0x7f0800a8
-			public const int chronometer = 2131230888;
+			// aapt resource value: 0x7f0800a9
+			public const int chronometer = 2131230889;
 			
 			// aapt resource value: 0x7f080039
 			public const int clip_horizontal = 2131230777;
@@ -4717,8 +4741,8 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f080021
 			public const int end = 2131230753;
 			
-			// aapt resource value: 0x7f0800b2
-			public const int end_padder = 2131230898;
+			// aapt resource value: 0x7f0800b3
+			public const int end_padder = 2131230899;
 			
 			// aapt resource value: 0x7f08002a
 			public const int enterAlways = 2131230762;
@@ -4756,8 +4780,8 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f080049
 			public const int icon = 2131230793;
 			
-			// aapt resource value: 0x7f0800ad
-			public const int icon_group = 2131230893;
+			// aapt resource value: 0x7f0800ae
+			public const int icon_group = 2131230894;
 			
 			// aapt resource value: 0x7f080025
 			public const int ifRoom = 2131230757;
@@ -4765,8 +4789,8 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f080046
 			public const int image = 2131230790;
 			
-			// aapt resource value: 0x7f0800a9
-			public const int info = 2131230889;
+			// aapt resource value: 0x7f0800aa
+			public const int info = 2131230890;
 			
 			// aapt resource value: 0x7f080000
 			public const int item_touch_helper_previous_elevation = 2131230720;
@@ -4777,11 +4801,11 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f080034
 			public const int left = 2131230772;
 			
-			// aapt resource value: 0x7f0800ae
-			public const int line1 = 2131230894;
+			// aapt resource value: 0x7f0800af
+			public const int line1 = 2131230895;
 			
-			// aapt resource value: 0x7f0800b0
-			public const int line3 = 2131230896;
+			// aapt resource value: 0x7f0800b1
+			public const int line3 = 2131230897;
 			
 			// aapt resource value: 0x7f08000f
 			public const int listMode = 2131230735;
@@ -4789,11 +4813,11 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f080048
 			public const int list_item = 2131230792;
 			
-			// aapt resource value: 0x7f0800b6
-			public const int masked = 2131230902;
+			// aapt resource value: 0x7f0800b7
+			public const int masked = 2131230903;
 			
-			// aapt resource value: 0x7f0800a2
-			public const int media_actions = 2131230882;
+			// aapt resource value: 0x7f0800a3
+			public const int media_actions = 2131230883;
 			
 			// aapt resource value: 0x7f080022
 			public const int middle = 2131230754;
@@ -4801,80 +4825,80 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f08003e
 			public const int mini = 2131230782;
 			
-			// aapt resource value: 0x7f08008e
-			public const int mr_art = 2131230862;
-			
-			// aapt resource value: 0x7f080083
-			public const int mr_chooser_list = 2131230851;
-			
-			// aapt resource value: 0x7f080086
-			public const int mr_chooser_route_desc = 2131230854;
+			// aapt resource value: 0x7f08008f
+			public const int mr_art = 2131230863;
 			
 			// aapt resource value: 0x7f080084
-			public const int mr_chooser_route_icon = 2131230852;
-			
-			// aapt resource value: 0x7f080085
-			public const int mr_chooser_route_name = 2131230853;
-			
-			// aapt resource value: 0x7f080082
-			public const int mr_chooser_title = 2131230850;
-			
-			// aapt resource value: 0x7f08008b
-			public const int mr_close = 2131230859;
-			
-			// aapt resource value: 0x7f080091
-			public const int mr_control_divider = 2131230865;
-			
-			// aapt resource value: 0x7f080097
-			public const int mr_control_playback_ctrl = 2131230871;
-			
-			// aapt resource value: 0x7f08009a
-			public const int mr_control_subtitle = 2131230874;
-			
-			// aapt resource value: 0x7f080099
-			public const int mr_control_title = 2131230873;
-			
-			// aapt resource value: 0x7f080098
-			public const int mr_control_title_container = 2131230872;
-			
-			// aapt resource value: 0x7f08008c
-			public const int mr_custom_control = 2131230860;
-			
-			// aapt resource value: 0x7f08008d
-			public const int mr_default_control = 2131230861;
-			
-			// aapt resource value: 0x7f080088
-			public const int mr_dialog_area = 2131230856;
+			public const int mr_chooser_list = 2131230852;
 			
 			// aapt resource value: 0x7f080087
-			public const int mr_expandable_area = 2131230855;
+			public const int mr_chooser_route_desc = 2131230855;
 			
-			// aapt resource value: 0x7f08009b
-			public const int mr_group_expand_collapse = 2131230875;
+			// aapt resource value: 0x7f080085
+			public const int mr_chooser_route_icon = 2131230853;
 			
-			// aapt resource value: 0x7f08008f
-			public const int mr_media_main_control = 2131230863;
+			// aapt resource value: 0x7f080086
+			public const int mr_chooser_route_name = 2131230854;
 			
-			// aapt resource value: 0x7f08008a
-			public const int mr_name = 2131230858;
+			// aapt resource value: 0x7f080083
+			public const int mr_chooser_title = 2131230851;
 			
-			// aapt resource value: 0x7f080090
-			public const int mr_playback_control = 2131230864;
-			
-			// aapt resource value: 0x7f080089
-			public const int mr_title_bar = 2131230857;
+			// aapt resource value: 0x7f08008c
+			public const int mr_close = 2131230860;
 			
 			// aapt resource value: 0x7f080092
-			public const int mr_volume_control = 2131230866;
+			public const int mr_control_divider = 2131230866;
+			
+			// aapt resource value: 0x7f080098
+			public const int mr_control_playback_ctrl = 2131230872;
+			
+			// aapt resource value: 0x7f08009b
+			public const int mr_control_subtitle = 2131230875;
+			
+			// aapt resource value: 0x7f08009a
+			public const int mr_control_title = 2131230874;
+			
+			// aapt resource value: 0x7f080099
+			public const int mr_control_title_container = 2131230873;
+			
+			// aapt resource value: 0x7f08008d
+			public const int mr_custom_control = 2131230861;
+			
+			// aapt resource value: 0x7f08008e
+			public const int mr_default_control = 2131230862;
+			
+			// aapt resource value: 0x7f080089
+			public const int mr_dialog_area = 2131230857;
+			
+			// aapt resource value: 0x7f080088
+			public const int mr_expandable_area = 2131230856;
+			
+			// aapt resource value: 0x7f08009c
+			public const int mr_group_expand_collapse = 2131230876;
+			
+			// aapt resource value: 0x7f080090
+			public const int mr_media_main_control = 2131230864;
+			
+			// aapt resource value: 0x7f08008b
+			public const int mr_name = 2131230859;
+			
+			// aapt resource value: 0x7f080091
+			public const int mr_playback_control = 2131230865;
+			
+			// aapt resource value: 0x7f08008a
+			public const int mr_title_bar = 2131230858;
 			
 			// aapt resource value: 0x7f080093
-			public const int mr_volume_group_list = 2131230867;
+			public const int mr_volume_control = 2131230867;
 			
-			// aapt resource value: 0x7f080095
-			public const int mr_volume_item_icon = 2131230869;
+			// aapt resource value: 0x7f080094
+			public const int mr_volume_group_list = 2131230868;
 			
 			// aapt resource value: 0x7f080096
-			public const int mr_volume_slider = 2131230870;
+			public const int mr_volume_item_icon = 2131230870;
+			
+			// aapt resource value: 0x7f080097
+			public const int mr_volume_slider = 2131230871;
 			
 			// aapt resource value: 0x7f080019
 			public const int multiply = 2131230745;
@@ -4891,14 +4915,14 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f080010
 			public const int normal = 2131230736;
 			
-			// aapt resource value: 0x7f0800ab
-			public const int notification_background = 2131230891;
+			// aapt resource value: 0x7f0800ac
+			public const int notification_background = 2131230892;
+			
+			// aapt resource value: 0x7f0800a6
+			public const int notification_main_column = 2131230886;
 			
 			// aapt resource value: 0x7f0800a5
-			public const int notification_main_column = 2131230885;
-			
-			// aapt resource value: 0x7f0800a4
-			public const int notification_main_column_container = 2131230884;
+			public const int notification_main_column_container = 2131230885;
 			
 			// aapt resource value: 0x7f080037
 			public const int parallax = 2131230775;
@@ -4921,11 +4945,11 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f080035
 			public const int right = 2131230773;
 			
-			// aapt resource value: 0x7f0800aa
-			public const int right_icon = 2131230890;
+			// aapt resource value: 0x7f0800ab
+			public const int right_icon = 2131230891;
 			
-			// aapt resource value: 0x7f0800a6
-			public const int right_side = 2131230886;
+			// aapt resource value: 0x7f0800a7
+			public const int right_side = 2131230887;
 			
 			// aapt resource value: 0x7f08001a
 			public const int screen = 2131230746;
@@ -4990,8 +5014,8 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f080017
 			public const int showTitle = 2131230743;
 			
-			// aapt resource value: 0x7f0800b3
-			public const int sliding_tabs = 2131230899;
+			// aapt resource value: 0x7f0800b4
+			public const int sliding_tabs = 2131230900;
 			
 			// aapt resource value: 0x7f080074
 			public const int smallLabel = 2131230836;
@@ -5023,8 +5047,8 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f080036
 			public const int start = 2131230774;
 			
-			// aapt resource value: 0x7f0800a1
-			public const int status_bar_latest_event_content = 2131230881;
+			// aapt resource value: 0x7f0800a2
+			public const int status_bar_latest_event_content = 2131230882;
 			
 			// aapt resource value: 0x7f08005e
 			public const int submenuarrow = 2131230814;
@@ -5035,11 +5059,11 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f080011
 			public const int tabMode = 2131230737;
 			
-			// aapt resource value: 0x7f0800b1
-			public const int text = 2131230897;
+			// aapt resource value: 0x7f0800b2
+			public const int text = 2131230898;
 			
-			// aapt resource value: 0x7f0800af
-			public const int text2 = 2131230895;
+			// aapt resource value: 0x7f0800b0
+			public const int text2 = 2131230896;
 			
 			// aapt resource value: 0x7f080052
 			public const int textSpacerNoButtons = 2131230802;
@@ -5056,8 +5080,8 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f08000d
 			public const int textinput_error = 2131230733;
 			
-			// aapt resource value: 0x7f0800a7
-			public const int time = 2131230887;
+			// aapt resource value: 0x7f0800a8
+			public const int time = 2131230888;
 			
 			// aapt resource value: 0x7f08004a
 			public const int title = 2131230794;
@@ -5068,8 +5092,8 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f080057
 			public const int title_template = 2131230807;
 			
-			// aapt resource value: 0x7f0800b4
-			public const int toolbar = 2131230900;
+			// aapt resource value: 0x7f0800b5
+			public const int toolbar = 2131230901;
 			
 			// aapt resource value: 0x7f080029
 			public const int top = 2131230761;
@@ -5095,11 +5119,11 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f08000e
 			public const int view_offset_helper = 2131230734;
 			
-			// aapt resource value: 0x7f0800b5
-			public const int visible = 2131230901;
+			// aapt resource value: 0x7f0800b6
+			public const int visible = 2131230902;
 			
-			// aapt resource value: 0x7f080094
-			public const int volume_item_container = 2131230868;
+			// aapt resource value: 0x7f080095
+			public const int volume_item_container = 2131230869;
 			
 			// aapt resource value: 0x7f080073
 			public const int webview = 2131230835;
@@ -5318,91 +5342,94 @@ namespace LazyBook.Droid
 			public const int design_text_input_password_icon = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int mini_fab = 2130903082;
+			public const int Main = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int mr_chooser_dialog = 2130903083;
+			public const int mini_fab = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int mr_chooser_list_item = 2130903084;
+			public const int mr_chooser_dialog = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
-			public const int mr_controller_material_dialog_b = 2130903085;
+			public const int mr_chooser_list_item = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int mr_controller_volume_item = 2130903086;
+			public const int mr_controller_material_dialog_b = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int mr_playback_control = 2130903087;
+			public const int mr_controller_volume_item = 2130903087;
 			
 			// aapt resource value: 0x7f030030
-			public const int mr_volume_control = 2130903088;
+			public const int mr_playback_control = 2130903088;
 			
 			// aapt resource value: 0x7f030031
-			public const int normal_fab = 2130903089;
+			public const int mr_volume_control = 2130903089;
 			
 			// aapt resource value: 0x7f030032
-			public const int notification_action = 2130903090;
+			public const int normal_fab = 2130903090;
 			
 			// aapt resource value: 0x7f030033
-			public const int notification_action_tombstone = 2130903091;
+			public const int notification_action = 2130903091;
 			
 			// aapt resource value: 0x7f030034
-			public const int notification_media_action = 2130903092;
+			public const int notification_action_tombstone = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public const int notification_media_cancel_action = 2130903093;
+			public const int notification_media_action = 2130903093;
 			
 			// aapt resource value: 0x7f030036
-			public const int notification_template_big_media = 2130903094;
+			public const int notification_media_cancel_action = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public const int notification_template_big_media_custom = 2130903095;
+			public const int notification_template_big_media = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int notification_template_big_media_narrow = 2130903096;
+			public const int notification_template_big_media_custom = 2130903096;
 			
 			// aapt resource value: 0x7f030039
-			public const int notification_template_big_media_narrow_custom = 2130903097;
+			public const int notification_template_big_media_narrow = 2130903097;
 			
 			// aapt resource value: 0x7f03003a
-			public const int notification_template_custom_big = 2130903098;
+			public const int notification_template_big_media_narrow_custom = 2130903098;
 			
 			// aapt resource value: 0x7f03003b
-			public const int notification_template_icon_group = 2130903099;
+			public const int notification_template_custom_big = 2130903099;
 			
 			// aapt resource value: 0x7f03003c
-			public const int notification_template_lines_media = 2130903100;
+			public const int notification_template_icon_group = 2130903100;
 			
 			// aapt resource value: 0x7f03003d
-			public const int notification_template_media = 2130903101;
+			public const int notification_template_lines_media = 2130903101;
 			
 			// aapt resource value: 0x7f03003e
-			public const int notification_template_media_custom = 2130903102;
+			public const int notification_template_media = 2130903102;
 			
 			// aapt resource value: 0x7f03003f
-			public const int notification_template_part_chronometer = 2130903103;
+			public const int notification_template_media_custom = 2130903103;
 			
 			// aapt resource value: 0x7f030040
-			public const int notification_template_part_time = 2130903104;
+			public const int notification_template_part_chronometer = 2130903104;
 			
 			// aapt resource value: 0x7f030041
-			public const int select_dialog_item_material = 2130903105;
+			public const int notification_template_part_time = 2130903105;
 			
 			// aapt resource value: 0x7f030042
-			public const int select_dialog_multichoice_material = 2130903106;
+			public const int select_dialog_item_material = 2130903106;
 			
 			// aapt resource value: 0x7f030043
-			public const int select_dialog_singlechoice_material = 2130903107;
+			public const int select_dialog_multichoice_material = 2130903107;
 			
 			// aapt resource value: 0x7f030044
-			public const int support_simple_spinner_dropdown_item = 2130903108;
+			public const int select_dialog_singlechoice_material = 2130903108;
 			
 			// aapt resource value: 0x7f030045
-			public const int Tabbar = 2130903109;
+			public const int support_simple_spinner_dropdown_item = 2130903109;
 			
 			// aapt resource value: 0x7f030046
-			public const int Toolbar = 2130903110;
+			public const int Tabbar = 2130903110;
+			
+			// aapt resource value: 0x7f030047
+			public const int Toolbar = 2130903111;
 			
 			static Layout()
 			{
@@ -5673,8 +5700,8 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f0b0170
 			public const int Animation_Design_BottomSheetDialog = 2131427696;
 			
-			// aapt resource value: 0x7f0b018b
-			public const int AppCompatDialogStyle = 2131427723;
+			// aapt resource value: 0x7f0b018c
+			public const int AppCompatDialogStyle = 2131427724;
 			
 			// aapt resource value: 0x7f0b00b2
 			public const int Base_AlertDialog_AppCompat = 2131427506;
@@ -6150,11 +6177,14 @@ namespace LazyBook.Droid
 			// aapt resource value: 0x7f0b000e
 			public const int CardView_Light = 2131427342;
 			
-			// aapt resource value: 0x7f0b0189
-			public const int MyTheme = 2131427721;
-			
 			// aapt resource value: 0x7f0b018a
-			public const int MyTheme_Base = 2131427722;
+			public const int MyTheme = 2131427722;
+			
+			// aapt resource value: 0x7f0b0189
+			public const int MyTheme_Base = 2131427721;
+			
+			// aapt resource value: 0x7f0b018b
+			public const int MyTheme_Splash = 2131427723;
 			
 			// aapt resource value: 0x7f0b002d
 			public const int Platform_AppCompat = 2131427373;
